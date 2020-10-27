@@ -15,6 +15,19 @@ variable "name" {
   description = "Solution name, e.g. 'app' or 'jenkins'"
 }
 
+variable "environment_variables_with_type" {
+  type = list(object(
+    {
+      name  = string
+      value = string
+      type = string
+  }))
+
+  default = []
+
+  description = "A list of maps, that contain the keys 'name', 'value' and 'type' to be used as additional environment variables for the build"
+}
+
 variable "environment_variables" {
   type = list(object(
     {

@@ -65,6 +65,11 @@ usage: |-
           value = "Pacific/Auckland"
 
         }]
+      environment_variables_with_type = [{
+          name  = "JENKINS_URL"
+          value = "https://jenkins.example.com"
+          type  = "PARAMETER_STORE"
+        }]
   }
   ```
 include:

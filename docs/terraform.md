@@ -37,6 +37,7 @@
 | delimiter | Delimiter to be used between `name`, `namespace`, `stage`, etc. | `string` | `"-"` | no |
 | enabled | A boolean to enable/disable resource creation | `bool` | `true` | no |
 | environment\_variables | A list of maps, that contain both the key 'name' and the key 'value' to be used as additional environment variables for the build | <pre>list(object(<br>    {<br>      name  = string<br>      value = string<br>  }))</pre> | <pre>[<br>  {<br>    "name": "NO_ADDITIONAL_BUILD_VARS",<br>    "value": "TRUE"<br>  }<br>]</pre> | no |
+| environment\_variables\_with\_type | A list of maps, that contain the keys 'name', 'value' and 'type' to be used as additional environment variables for the build | <pre>list(object(<br>    {<br>      name  = string<br>      value = string<br>      type = string<br>  }))</pre> | `[]` | no |
 | extra\_permissions | List of action strings which will be added to IAM service account permissions. | `list` | `[]` | no |
 | fetch\_git\_submodules | If set to true, fetches Git submodules for the AWS CodeBuild build project. | `bool` | `false` | no |
 | git\_clone\_depth | Truncate git history to this many commits. | `number` | `null` | no |
